@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="welcome-container">
+    <h1>🌤️ Welcome you all </h1>
+    <p>Ready to check the weather in your city?</p>
+ <p>What's your name?</p>
+    <input type="text" id="userName" placeholder="Enter your name">
+ 
+   <button onclick="startApp()">Let's Go</button>
+  </div>
+
+  <script>
+    function startApp() {
+ const name = document.getElementById('userName').value.trim();
+      if (name) {
+        localStorage.setItem('userName', name);
+        window.location.href = "index.html";
+      } else {
+        alert("Please enter your name to continue.");
+      }
+    }
+
+  </script>
+</body>
+</html>
